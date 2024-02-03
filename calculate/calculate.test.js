@@ -15,3 +15,7 @@ test('use multiply method to return 2 * 2 to be 4', () => {
 test('use divide method to return 10 / 5 to be 2', () => {
     expect(calculate.divide(10, 5)).toBe(2);
 })
+
+test('use divide method to return 10 / 0 to be "ERROR"', () => {
+    expect(calculate.divide(10, 0)).toBe("ERROR");
+})
