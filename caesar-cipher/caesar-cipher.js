@@ -1,8 +1,10 @@
 function caesarCipher(str, key) {
-  if (typeof str !== 'string' || typeof key !== 'number') {
-    throw new Error(
-      'Invalid input. The input string must be a string, and the key must be a number.'
-    );
+  if (typeof str !== 'string') {
+    throw new Error('Invalid input. The input string must be a string');
+  }
+
+  if (typeof key !== 'number') {
+    throw new Error('Invalid shift value. Key must be of type "number"');
   }
 
   const baseLower = 'a'.charCodeAt(0);
