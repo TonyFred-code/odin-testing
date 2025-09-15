@@ -1,27 +1,25 @@
-function caesarCipher(str, key) {
-  if (typeof str !== 'string') {
-    throw new Error('Invalid input. The input string must be a string');
+export default function caesarCipher(str, key) {
+  if (typeof str !== "string") {
+    throw new Error("Invalid input. The input string must be a string");
   }
 
-  if (typeof key !== 'number') {
+  if (typeof key !== "number") {
     throw new Error('Invalid shift value. Key must be of type "number"');
   }
 
-  const baseLower = 'a'.charCodeAt(0);
-  const baseUpper = 'A'.charCodeAt(0);
+  const baseLower = "a".charCodeAt(0);
+  const baseUpper = "A".charCodeAt(0);
 
-  let result = '';
+  let result = "";
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
-    let base, upperBound;
+    let base;
 
     if (/[a-z]/.test(char)) {
       base = baseLower;
-      upperBound = baseLower + 25;
     } else if (/[A-Z]/.test(char)) {
       base = baseUpper;
-      upperBound = baseUpper + 25;
     } else {
       // Not an alphabet character, leave unchanged
       result += char;
@@ -35,5 +33,3 @@ function caesarCipher(str, key) {
 
   return result;
 }
-
-module.exports = caesarCipher;

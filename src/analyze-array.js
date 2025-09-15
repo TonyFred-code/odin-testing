@@ -17,7 +17,7 @@ function getLength(array) {
   return array.length;
 }
 
-function analyzeArray(array) {
+export default function analyzeArray(array) {
   const average = getAverage(array);
   const min = getMin(array);
   const max = getMax(array);
@@ -30,5 +30,3 @@ function analyzeArray(array) {
     length,
   };
 }
-
-module.exports = analyzeArray;
