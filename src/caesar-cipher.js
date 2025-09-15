@@ -14,14 +14,12 @@ export default function caesarCipher(str, key) {
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
-    let base, upperBound;
+    let base;
 
     if (/[a-z]/.test(char)) {
       base = baseLower;
-      upperBound = baseLower + 25;
     } else if (/[A-Z]/.test(char)) {
       base = baseUpper;
-      upperBound = baseUpper + 25;
     } else {
       // Not an alphabet character, leave unchanged
       result += char;
