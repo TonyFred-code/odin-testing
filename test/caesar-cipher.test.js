@@ -24,13 +24,13 @@ describe("caesarCipher", () => {
 
   it("throws error when first parameter is not a string type", () => {
     expect(() => caesarCipher([1, 2, 3])).toThrowError(
-      "Invalid input. The input string must be a string"
+      "Invalid input. The input string must be a string",
     );
   });
 
   it("throws error when second parameter is not a number type", () => {
     expect(() => caesarCipher("a", [1])).toThrowError(
-      'Invalid shift value. Key must be of type "number"'
+      'Invalid shift value. Key must be of type "number"',
     );
   });
 });
